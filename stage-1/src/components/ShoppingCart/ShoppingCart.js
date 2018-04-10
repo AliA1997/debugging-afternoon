@@ -2,17 +2,17 @@ import React, { Component } from 'react';
 import './ShoppingCart.css';
 
 class ShoppingCart extends Component {
-    costructor(props) {
+    constructor(props) {
         super(props);
 
         this.state = {
-            shoppingCart: this.props.shoppingCart
+            shoppingCart: []
         }
     }
 
-    componentWillReceiveProps(nextProps) {
+    componentWillReceiveProps() {
         this.setState({
-            shoppingCart: nextProps.shoppingCart
+            shoppingCart: this.props.shoppingCart
         })
     }
 

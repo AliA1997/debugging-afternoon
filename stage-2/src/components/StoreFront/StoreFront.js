@@ -9,6 +9,7 @@ class StoreFront extends Component {
         this.state = {
             products: []
         }
+        this.componentDidMount = this.componentDidMount.bind(this);
     }
 
     componentDidMount() {

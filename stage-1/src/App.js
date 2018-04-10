@@ -10,7 +10,6 @@ import { Route, Switch } from 'react-router-dom';
 class App extends Component {
   constructor() {
     super();
-
     this.state = {
       shoppingCart: []
     }
@@ -27,7 +26,7 @@ class App extends Component {
   }
 
   removeFromShoppingCart(product) {
-    let newShoppingCart = this.state.shoppingCart;
+    let newShoppingCart = this.state.shoppingCart.slice();
     newShoppingCart.splice(newShoppingCart.indexOf(product), 1);
     this.setState({
       shoppingCart: newShoppingCart
